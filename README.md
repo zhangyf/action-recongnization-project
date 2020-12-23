@@ -1,4 +1,4 @@
-# action-recongnization-project
+# Action-recongnization-project
 
 ## This is the official github repo for project. All timelines will be posted here. Check if you need.
 
