@@ -14,3 +14,7 @@
 ### 2. json还请帮忙搞一下，并提供个时间点
 
 ### 3. 文档在这三个问题里相对最不紧急，可以先搞定前面2个，最后再给这个
+
+### Questions to ask
+
+### 1. How stable FPS is? That's important question.
