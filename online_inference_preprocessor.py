@@ -43,7 +43,7 @@ if __name__ == "__main__":
     # Gather status
     assert cap.isOpened(), "Unable to obtain video!"
     stream_name = stream_link.split("/")[-1].replace(stream_affix, "")
-    assert stream_name.split(".") == 2, "cannot locate device id and job id, is the url correct?"
+    assert len(stream_name.split(".")) == 2, "cannot locate device id and job id, is the url correct?"
     data["device_id"], data["job_id"] = stream_name.split(".")
     # Collect FPS
     fps = cap.get(cv2.CAP_PROP_FPS)
@@ -80,18 +80,14 @@ if __name__ == "__main__":
             success, frame = cap.read()
             if tot == 0:
                 # set start time here, need to do conversion
-                # TODO: complete conversion
                 start_time = datetime.datetime.now()
                 data["start_timestamp"] = time.mktime(start_time.timetuple())
-                start_time_check = cap.get(cv2.CAP_PROP_POS_MSEC)
-                print("check start time matching: {}".format(start_time_check))
 
             # save frame only after given skip_frame count
             if skip_frame != -1 and tot % skip_frame == 0:
                 cv2.imwrite('cut/' + 'cut_' + str(tot // skip_frame) + '.jpg', frame)
             tot += 1
             outVideo.write(frame)
-            # TODO: Check if low fps is caused by here
             cv2.waitKey(25)
         else:
             outVideo.release()
@@ -104,8 +100,6 @@ if __name__ == "__main__":
             # save json info here. Add inference result later.
             end_time = start_time + timedelta
             data["end_timestamp"] = time.mktime(end_time.timetuple())
-            end_time_check = cap.get(cv2.CAP_PROP_POS_MSEC)
-            print("check end time matching: {}".format(end_time_check))
             save_metadata(data, output_metadata_name + ".json")
         print(
             "{} / {} frames gathered for video {}!".format(tot, int(total_frames),
