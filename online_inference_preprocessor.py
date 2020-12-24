@@ -71,9 +71,11 @@ if __name__ == "__main__":
     timedelta = datetime.timedelta(seconds=save_seconds)
     total_frames = save_seconds * fps
 
-    outVideo = cv2.VideoWriter(os.path.join(save_video_folder, stream_name + "_" + str(stream_id) + output_affix),
-                               fourcc, fps,
-                               size)
+    output_video_name = os.path.join(save_video_folder, stream_name + "_" + str(stream_id))
+    output_metadata_name = os.path.join(save_meta_folder, stream_name + "_" + str(stream_id))
+    outVideo = cv2.VideoWriter(output_video_name + output_affix, fourcc,
+                               fps, size)
+    save_metadata(data, output_metadata_name + ".json")
 
     while success:
         if tot < total_frames:
