@@ -12,6 +12,7 @@
 #### 2020/12/28 Setup initial video preprocessor for mmaction video processing
 #### 2020/12/31 Initial evaluation completed. Evaluation accuracy : 90%
 #### 2021/01/01 Initial testing result completed. Check at provided location for inference video.
+#### 2021/01/01 Complete training/testing code uploaded to github. Currently support recognization for all available data until now. 
 
 ### Priority table
 
