@@ -9,6 +9,8 @@
 #### 2020/12/25 Switched to new framework mmaction
 #### 2020/12/25 Waiting for complete training data
 #### 2020/12/28 Setup initial video preprocessor for mmaction video processing
+#### 2020/12/31 Initial evaluation completed. Evaluation accuracy : 90%
+#### 2021/01/01 Initial testing result completed. Check at provided location for inference video.
 
 ### Priority table
 
