@@ -188,11 +188,11 @@ def main():
             for lines in raw_data:
                 file_writer.writelines(lines)
         
-        top1, top5 = top_k_accuracy(results, gt_labels, k=(1, 5))
-        mean_acc = mean_class_accuracy(results, gt_labels)
-        print("Mean Class Accuracy = {:.02f}".format(mean_acc * 100))
-        print("Top-1 Accuracy = {:.02f}".format(top1 * 100))
-        print("Top-5 Accuracy = {:.02f}".format(top5 * 100))
+        # top1, top5 = top_k_accuracy(results, gt_labels, k=(1, 5))
+        # mean_acc = mean_class_accuracy(results, gt_labels)
+        # print("Mean Class Accuracy = {:.02f}".format(mean_acc * 100))
+        # print("Top-1 Accuracy = {:.02f}".format(top1 * 100))
+        # print("Top-5 Accuracy = {:.02f}".format(top5 * 100))
 
 
 if __name__ == '__main__':
