@@ -13,6 +13,7 @@
 #### 2020/12/31 Initial evaluation completed with TSN model. Evaluation accuracy : 90%
 #### 2021/01/01 Initial offline inference completed. Check at provided location for inference video.
 #### 2021/01/01 Complete training/testing code uploaded to github. Currently support recognization for all available data until now. 
+#### 2021/01/02 Documentation available
 
 ### Priority table
 
