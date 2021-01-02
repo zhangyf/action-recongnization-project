@@ -6,6 +6,7 @@
 
 #### 2020/12/23 repo initiated.
 #### 2020/12/23 online real time inference code uploaded. Need to conduct testing.
+#### 2020/12/24 Pass test for online inference
 #### 2020/12/25 Switched to new framework mmaction
 #### 2020/12/25 Waiting for complete training data
 #### 2020/12/28 Setup initial video preprocessor for mmaction video processing
